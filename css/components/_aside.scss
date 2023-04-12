@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+aside {
+  @include mix.flex(25%);
+  padding: var.$gutter-base;
+  @include mix.flex2(column, flex-start);
+  @media (max-width: 768px) {
+    @include mix.flex2(row, space-between);
+    padding: math.div(var.$gutter-base, 2);
+    flex-basis: 5%;
+  }
+  @media (max-width: 425px) {
+    flex-basis: 10%;
+  }
+  img {
+    width: 50%;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      width: 25%;
+      height: 20px;
+      margin-bottom: 0px;
+      align-self: center;
+    }
+    @media (max-width: 425px) {
+      height: 20px;
+      align-self: center;
+    }
+  }
+  ul {
+    display: block;
+    list-style: none;
+    padding-left: 0;
+    @media (max-width: 768px) {
+      display: none;
+    }
+    li {
+      padding-bottom: math.div(var.$gutter-base, 1.6);
+      a {
+        text-decoration: none;
+        color: var.$text-color-secondary;
+      }
+    }
+  }
+
+  .toggleBtn {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #aeadad;
+    padding: 2px 5px;
+    display: none;
+    cursor: pointer;
+    @media (max-width: 768px) {
+      display: block;
+    }
+    .grey {
+      color: var.$text-color-secondary;
+    }
+  }
+  .textBox {
+    margin-top: auto;
+    color: var.$text-color-secondary;
+    a {
+      color: var.$text-color-base;
+      font-weight: var.$font-weight-bold;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}

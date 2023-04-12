@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+aside {
+  flex: 1 0 25%;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  aside {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-basis: 5%;
+  }
+}
+@media (max-width: 425px) {
+  aside {
+    flex-basis: 10%;
+  }
+}
+aside img {
+  width: 50%;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  aside img {
+    width: 25%;
+    height: 20px;
+    margin-bottom: 0px;
+    align-self: center;
+  }
+}
+@media (max-width: 425px) {
+  aside img {
+    height: 20px;
+    align-self: center;
+  }
+}
+aside ul {
+  display: block;
+  list-style: none;
+  padding-left: 0;
+}
+@media (max-width: 768px) {
+  aside ul {
+    display: none;
+  }
+}
+aside ul li {
+  padding-bottom: 1.25rem;
+}
+aside ul li a {
+  text-decoration: none;
+  color: #868686;
+}
+aside .toggleBtn {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #aeadad;
+  padding: 2px 5px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  aside .toggleBtn {
+    display: block;
+  }
+}
+aside .toggleBtn .grey {
+  color: #868686;
+}
+aside .textBox {
+  margin-top: auto;
+  color: #868686;
+}
+aside .textBox a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  aside .textBox {
+    display: none;
+  }
+}
+aside a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1 0 75%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  main {
+    flex-basis: 95%;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    flex-basis: 90%;
+  }
+}
+main a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  flex-basis: 33.333%;
+}
+@media (max-width: 768px) {
+  main a {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 425px) {
+  main a {
+    flex-basis: 100%;
+    height: 100vw;
+  }
+}
+main a .item {
+  display: none;
+  flex-basis: 80%;
+  text-align: center;
+  color: #868686;
+  padding-top: 1.25rem;
+  border-top: 1px solid #868686;
+  border-bottom: 1px solid #868686;
+}
+main a:hover img {
+  display: none;
+}
+main a:hover .item {
+  display: block;
+} /*# sourceMappingURL=main.css.map */
